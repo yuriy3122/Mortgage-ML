@@ -1,11 +1,13 @@
 <img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/kan.png">
 
-# Kolmogorov-Arnold Networks (KANs)
+# Mortgage-ML
+
+This code is an example of usage of Kolmogorov-Arnold Networks (KANs) for classification task.
 
 Kolmogorov-Arnold Networks (KANs) are promising alternatives of Multi-Layer Perceptrons (MLPs). KANs have strong mathematical foundations just like MLPs: MLPs are based on the universal approximation theorem, while KANs are based on Kolmogorov-Arnold representation theorem. KANs and MLPs are dual: KANs have activation functions on edges, while MLPs have activation functions on nodes. This simple change makes KANs better (sometimes much better!) than MLPs in terms of both model **accuracy** and **interpretability**. A quick intro of KANs [here](https://kindxiaoming.github.io/pykan/intro.html).
 
 ## Installation
-Pykan can be installed via PyPI or directly from GitHub. 
+Pykan can be installed via PyPI or directly from GitHub.
 
 **Pre-requisites:**
 
