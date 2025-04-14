@@ -15,5 +15,6 @@ parser.py
 setup.py
 test.py
 trainModel.py
+mlp.py
 MeasureRecords.csv
 train-hmda-data.csv
