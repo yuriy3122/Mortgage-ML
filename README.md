@@ -3,6 +3,7 @@
 # Mortgage-ML
 
 This code is an example of usage of Kolmogorov-Arnold Networks (KANs) for binary classification task.
+Based on the github repo: <a href="url">https://github.com/KindXiaoming/pykan</a>
 KAN model used to estimate the creditworthiness of loan and credit applicants using historical data and income in the context of current micro and macroeconomic factors.
 Historical data based on public FFIEC Home Mortgage Disclosure Act: <a href="url">https://ffiec.cfpb.gov/</a>
 
