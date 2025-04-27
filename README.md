@@ -3,6 +3,8 @@
 # Mortgage-ML
 
 This code is an example of usage of Kolmogorov-Arnold Networks (KANs) for binary classification task.
+KAN model used to estimate the creditworthiness of loan and credit applicants using historical data and income in the context of current micro and macroeconomic factors.
+Historical data based on public FFIEC Home Mortgage Disclosure Act: <a href="url">https://ffiec.cfpb.gov/</a>
 
 Kolmogorov-Arnold Networks (KANs) are promising alternatives of Multi-Layer Perceptrons (MLPs). KANs have strong mathematical foundations based on Kolmogorov-Arnold representation theorem. KANs and MLPs are dual: KANs have activation functions on edges, while MLPs have activation functions on nodes. This simple change makes KANs better than MLPs in terms of both model **accuracy** and **interpretability**.
 
@@ -12,7 +14,7 @@ Pykan can be installed via PyPI or directly from GitHub.
 **Pre-requisites:**
 
 ```
-Python 3.9.7 or higher
+Python 3.12 or higher
 pip
 ```
 
