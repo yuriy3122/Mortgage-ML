@@ -10,7 +10,7 @@ Historical data based on FFIEC Home Mortgage Disclosure Act <a href="url">https:
 Kolmogorov-Arnold Networks (KANs) are promising alternatives of Multi-Layer Perceptrons (MLPs). KANs have strong mathematical foundations based on Kolmogorov-Arnold representation theorem. KANs and MLPs are dual: KANs have activation functions on edges, while MLPs have activation functions on nodes. This simple change makes KANs better than MLPs in terms of both model **accuracy** and **interpretability**.
 
 ## Installation
-Pykan can be installed via PyPI or directly from GitHub.
+Pykan library can be installed via PyPI or directly from GitHub.
 
 **Pre-requisites:**
 
