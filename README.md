@@ -23,16 +23,6 @@ After activating the virtual environment, you can install specific package requi
 ```python
 pip install -r requirements.txt
 ```
-
-**Optional: Conda Environment Setup**
-For those who prefer using Conda:
-```
-conda create --name pykan-env python=3.9.7
-conda activate pykan-env
-pip install git+https://github.com/KindXiaoming/pykan.git  # For GitHub installation
-# or
-pip install pykan  # For PyPI installation
-```
 ## Efficiency mode
 For many machine-learning users, when (1) you need to write the training loop yourself (instead of using ``model.fit()``); (2) you never use the symbolic branch, it is important to call ``model.speed()`` before training! Otherwise, the symbolic branch is on, which is super slow because the symbolic computations are not parallelized!
 
