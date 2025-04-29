@@ -7,7 +7,6 @@ Kolmogorov-Arnold Networks (KANs) are promising alternatives of Multi-Layer Perc
 
 Based on the github repo: <a href="url">https://github.com/KindXiaoming/pykan</a><br>
 KAN model used to estimate the creditworthiness of loan applicants using historical data in the context of macroeconomic factors.<br>
-Training dataset based on FFIEC Home Mortgage Disclosure Act data: <a href="url">https://ffiec.cfpb.gov/</a>
 
 ## Installation
 Pykan library can be installed via PyPI or directly from GitHub.
@@ -24,7 +23,7 @@ After activating the virtual environment, you can install specific package requi
 pip install -r requirements.txt
 ```
 ## Data Preparation
-1190 rows × 12 columns
+Training dataset based on FFIEC Home Mortgage Disclosure Act: <a href="url">https://ffiec.cfpb.gov/</a>
 
 ## KAN model building
 Here is you can build KAN model.
