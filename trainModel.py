@@ -68,8 +68,9 @@ val_predictions = torch.argmax(model.forward(val_input).detach(), dim=1)
 val_labels = val_label
 
 # Evaluate metrics
-acc = accuracy_score(train_labels.cpu().numpy(), train_predictions.cpu().numpy())
-print("Model accuracy: %.2f%%" % (acc * 100))
+print("Train ACC:", accuracy_score(train_labels.cpu().numpy(), train_predictions.cpu().numpy()))
+print("Val ACC:", accuracy_score(val_labels.cpu().numpy(), val_predictions.cpu().numpy()))
+print("Test ACC:", accuracy_score(test_labels.cpu().numpy(), test_predictions.cpu().numpy()))
 
 # save model to the file
 model.to(torch.device("cpu")).saveckpt('./kan-model')
