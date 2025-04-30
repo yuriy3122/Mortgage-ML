@@ -65,10 +65,10 @@ dataset = {
 model = KAN(width=[14, 5, 2], grid=10, k=3).to(device)
 
 First hyperparameter is "width" which defines the structure of model.
-14 means 14 feature, 5 hidden neurons and 2 means 2 output edge for our task which is binary classification.
+14 means 14 feature, 5 hidden neurons and 2 output edge for binary classification.
 "grid" parameter refer to the number of combined points of each functional section.
 KAN tries to complete non-linear relationships by processing data on this grid.
-The k parameter determines the maximum degree of basic functions to be used for each functional representative.
+The k parameter determines the maximum degree of basic functions.
 ```
 
 
