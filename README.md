@@ -61,7 +61,7 @@ dataset = {
 ```
 
 ## KAN model building
-```trainModel.py
+```
 model = KAN(width=[14, 5, 2], grid=10, k=3).to(device)
 ```
 First hyperparameter is "width" which defines the structure of model.
@@ -90,7 +90,7 @@ Train ACC: 0.943069885471969<br>
 Val ACC: 0.9375194764724213<br>
 Test ACC: 0.9370520411343097<br>
 
-MLP (Multilayer perceptron) accuracy on the same dataset: 0.8232
+MLP accuracy, same dataset: 0.8232
 
 ## Plotting KAN network
 model.plot()
