@@ -27,7 +27,7 @@ Training dataset based on FFIEC Home Mortgage Disclosure Act: <a href="url">http
 ```
 df = pd.read_csv('train-hmda-data.csv', na_values="Exempt")
 ```
-Using data scaling to get good results:
+Using data scaling:
 ```
 scaler = preprocessing.MinMaxScaler()
 scaler.fit(x)
