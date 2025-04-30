@@ -31,7 +31,7 @@ X = df[list(df.columns.drop(["action_taken", "loan_amount", "income", "loan_term
 y = df["action_taken"]
 x = X.values
 ```
-KAN algorithm requires data scaling to produce good results:
+Using data scaling to get good results:
 ```
 scaler = preprocessing.MinMaxScaler()
 scaler.fit(x)
