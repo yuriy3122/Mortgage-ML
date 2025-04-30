@@ -68,7 +68,7 @@ First hyperparameter is "width" which defines the structure of model.
 14 means 14 feature, 5 hidden neurons and 2 output edge for binary classification.
 "grid" parameter refer to the number of combined points of each functional section.
 KAN tries to complete non-linear relationships by processing data on this grid.
-The k parameter determines the maximum degree of basic functions.
+The "k" parameter determines the maximum degree of basic functions.
 
 ## KAN model training
 ```
