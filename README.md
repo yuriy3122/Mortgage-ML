@@ -85,9 +85,13 @@ and an epoch means processing the entire data set once.
 
 ## KAN model results
 
+KAN Model accuracy:
 Train ACC: 0.943069885471969<br>
 Val ACC: 0.9375194764724213<br>
 Test ACC: 0.9370520411343097<br>
+
+MLP (Multilayer perceptron) accuracy on the same dataset:
+Train ACC: 0.8232<br>
 
 ## Plotting KAN network
 model.plot()
