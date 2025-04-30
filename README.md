@@ -26,10 +26,6 @@ pip install -r requirements.txt
 Training dataset based on FFIEC Home Mortgage Disclosure Act: <a href="url">https://ffiec.cfpb.gov/</a>
 ```
 df = pd.read_csv('train-hmda-data.csv', na_values="Exempt")
-df = df.dropna()
-X = df[list(df.columns.drop(["action_taken", "loan_amount", "income", "loan_term", "property_value"]))[1:19]]
-y = df["action_taken"]
-x = X.values
 ```
 Using data scaling to get good results:
 ```
