@@ -26,7 +26,17 @@ pip install -r requirements.txt
 Training dataset based on FFIEC Home Mortgage Disclosure Act: <a href="url">https://ffiec.cfpb.gov/</a>
 ```
 df = pd.read_csv('train-hmda-data.csv', na_values="Exempt")
-42785 rows × 20 columns
+df = df.dropna()
+X = df[list(df.columns.drop(["action_taken", "loan_amount", "income", "loan_term", "property_value"]))[1:19]]
+y = df["action_taken"]
+x = X.values
+```
+KAN algorithm requires data scaling to produce good results:
+```
+scaler = preprocessing.MinMaxScaler()
+scaler.fit(x)
+x_scaled = scaler.transform(x)
+X = pd.DataFrame(x_scaled)
 ```
 
 ## KAN model building
