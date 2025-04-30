@@ -70,6 +70,18 @@ First hyperparameter is "width" which defines the structure of model.
 KAN tries to complete non-linear relationships by processing data on this grid.
 The k parameter determines the maximum degree of basic functions.
 
+# KAN model training
+```
+results = model.fit({'train_input': train_input, 'train_label': train_label, 'test_input': val_input, 'test_label': val_label},
+                     metrics=(train_acc, test_acc), opt="LBFGS", steps=100, loss_fn=torch.nn.CrossEntropyLoss())
+```
+"opt" hyperparameter could be “LBFGS” or “Adam”
+
+"steps" parameter specifies the total number of iterations to be performed during the training process. This is similar to epoch in some ways, 
+but each 'step' usually runs on a batch, and an epoch means processing the entire data set once. 
+This parameter directly affects how long the model will be trained and how many updates will be made.
+
+"loss_fn" for binary classification task this is CrossEntropLoss()
 
 ## KAN model results
 MLP compare
