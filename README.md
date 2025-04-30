@@ -99,12 +99,6 @@ model.plot()
 <img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/plot.png">
 
 
-## Predictions
-You can also plot KAN model.
-
-## Deployment
-
-
 
 
 
