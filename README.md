@@ -89,6 +89,9 @@ Train ACC: 0.943069885471969<br>
 Val ACC: 0.9375194764724213<br>
 Test ACC: 0.9370520411343097<br>
 
+## Plotting KAN network
+model.plot(scale=10)
+
 <img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/KAN-scheme.png">
 
 <br>
