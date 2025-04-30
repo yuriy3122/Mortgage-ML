@@ -24,6 +24,10 @@ pip install -r requirements.txt
 ```
 ## Data Preparation
 Training dataset based on FFIEC Home Mortgage Disclosure Act: <a href="url">https://ffiec.cfpb.gov/</a>
+```
+df = pd.read_csv('train-hmda-data.csv', na_values="Exempt")
+42785 rows × 20 columns
+```
 
 ## KAN model building
 Here is you can build KAN model.
