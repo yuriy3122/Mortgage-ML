@@ -61,7 +61,7 @@ dataset = {
 ```
 
 ## KAN model building
-```
+```trainModel.py
 model = KAN(width=[14, 5, 2], grid=10, k=3).to(device)
 ```
 First hyperparameter is "width" which defines the structure of model.
@@ -90,13 +90,13 @@ Val ACC: 0.9375194764724213<br>
 Test ACC: 0.9370520411343097<br>
 
 ## Plotting KAN network
-model.plot(scale=10)
+model.plot()
 
 <img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/KAN-scheme.png">
 
 <br>
 
-<img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/kan.png">
+<img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/plot.png">
 
 
 ## Predictions
