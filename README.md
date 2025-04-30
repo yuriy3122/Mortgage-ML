@@ -85,7 +85,7 @@ and an epoch means processing the entire data set once.
 
 ## KAN model results
 
-KAN Model accuracy:
+KAN Model accuracy:<br>
 Train ACC: 0.943069885471969<br>
 Val ACC: 0.9375194764724213<br>
 Test ACC: 0.9370520411343097<br>
