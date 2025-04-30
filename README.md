@@ -77,14 +77,24 @@ results = model.fit({'train_input': train_input, 'train_label': train_label, 'te
 ```
 "opt" hyperparameter could be “LBFGS” or “Adam”
 
-"steps" parameter specifies the total number of iterations to be performed during the training process. This is similar to epoch in some ways, 
-but each 'step' usually runs on a batch, and an epoch means processing the entire data set once. 
-This parameter directly affects how long the model will be trained and how many updates will be made.
+"steps" parameter specifies the total number of iterations to be performed during the training process. 
+This is similar to epoch in some ways, but each 'step' usually runs on a batch, 
+and an epoch means processing the entire data set once.
 
 "loss_fn" for binary classification task this is CrossEntropLoss()
 
 ## KAN model results
-MLP compare
+
+Train ACC: 0.943069885471969
+Val ACC: 0.9375194764724213
+Test ACC: 0.9370520411343097
+
+<img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/kan.png">
+
+<br>
+
+<img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/kan.png">
+
 
 ## Predictions
 You can also plot KAN model.
