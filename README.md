@@ -34,6 +34,21 @@ scaler.fit(x)
 x_scaled = scaler.transform(x)
 X = pd.DataFrame(x_scaled)
 ```
+Splitting data into train val and test and then convert them to Torch tensors:
+```
+# Splitting data to train val test
+X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.3, random_state=5)
+X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, random_state=5)
+
+# Converting data to Torch tensor
+train_input = torch.tensor(X_train.to_numpy(), dtype=torch.float32, device=device)
+train_label = torch.tensor(y_train.to_numpy(), dtype=torch.long, device=device)
+val_input = torch.tensor(X_val.to_numpy(), dtype=torch.float32, device=device)
+val_label = torch.tensor(y_val.to_numpy(), dtype=torch.long, device=device)
+test_input = torch.tensor(X_test.to_numpy(), dtype=torch.float32, device=device)
+test_label = torch.tensor(y_test.to_numpy(), dtype=torch.long, device=device)
+```
+
 
 ## KAN model building
 Here is you can build KAN model.
