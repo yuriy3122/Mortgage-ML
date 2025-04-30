@@ -48,10 +48,29 @@ val_label = torch.tensor(y_val.to_numpy(), dtype=torch.long, device=device)
 test_input = torch.tensor(X_test.to_numpy(), dtype=torch.float32, device=device)
 test_label = torch.tensor(y_test.to_numpy(), dtype=torch.long, device=device)
 ```
-
+This dictionary is necessary for KAN training:
+```
+dataset = {
+    'train_input': train_input,
+    'train_label': train_label,
+    'val_input': val_input,
+    'val_label': val_label,
+    'test_input': test_input,
+    'test_label': test_label
+}
+```
 
 ## KAN model building
-Here is you can build KAN model.
+```
+model = KAN(width=[14, 5, 2], grid=10, k=3).to(device)
+
+First hyperparameter is "width" which defines the structure of model.
+14 means 14 feature, 5 hidden neurons and 2 means 2 output edge for our task which is binary classification.
+"grid" parameter refer to the number of combined points of each functional section.
+KAN tries to complete non-linear relationships by processing data on this grid.
+The k parameter determines the maximum degree of basic functions to be used for each functional representative.
+```
+
 
 ## KAN model results
 MLP compare
