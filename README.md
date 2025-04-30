@@ -70,7 +70,7 @@ First hyperparameter is "width" which defines the structure of model.
 KAN tries to complete non-linear relationships by processing data on this grid.
 The k parameter determines the maximum degree of basic functions.
 
-# KAN model training
+## KAN model training
 ```
 results = model.fit({'train_input': train_input, 'train_label': train_label, 'test_input': val_input, 'test_label': val_label},
                      metrics=(train_acc, test_acc), opt="LBFGS", steps=100, loss_fn=torch.nn.CrossEntropyLoss())
