@@ -101,6 +101,18 @@ model.plot()
 
 <img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/plot.png">
 
+<br>
+
+<img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/ConfusionMatrix.png">
+
+<br>
+
+<img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/ROC.png">
+
+<br>
+
+<img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/PrecisionRecall.png">
+
 
 
 
