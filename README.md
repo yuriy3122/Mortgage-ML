@@ -103,6 +103,8 @@ model.plot()
 
 <br>
 
+Confusion Matrix:
+
 <img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/ConfusionMatrix.png">
 
 <br>
