@@ -4,8 +4,12 @@ import joblib
 import matplotlib.pyplot as plt
 from kan import KAN
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import roc_curve, auc
 from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import ConfusionMatrixDisplay
+from sklearn.metrics import precision_recall_curve, average_precision_score
 
 df = pd.read_csv('train-hmda-data.csv', na_values="Exempt")
 df = df.dropna()
@@ -90,4 +94,44 @@ plt.xlabel('Iteration')
 plt.ylabel('Accuracy & Loss')
 plt.legend()
 plt.grid(True)
+plt.show()
+
+y_test = val_labels.cpu().numpy()
+y_pred = val_predictions.cpu().numpy()
+
+cm = confusion_matrix(y_test, y_pred)
+
+disp = ConfusionMatrixDisplay(confusion_matrix=cm)
+disp.plot()
+plt.show()
+
+def forward_probabilities(x):
+    x = model.forward(x).detach()
+    x = torch.nn.functional.softmax(x, dim=1)
+    return x
+
+test_proba = forward_probabilities(test_input)[:, 1]
+fpr, tpr, _ = roc_curve(test_label, test_proba)
+roc_auc = auc(fpr, tpr)
+
+plt.figure(figsize=(8, 6))
+plt.plot(fpr, tpr, label=f"ROC Curve for KAN (AUC = {roc_auc:.2f})")
+plt.plot([0, 1], [0, 1], 'k--', lw=2)
+plt.xlabel("False Positive Rate")
+plt.ylabel("True Positive Rate")
+plt.title("ROC Curve")
+plt.legend(loc="lower right")
+plt.grid(True)
+plt.show()
+
+precision, recall, thresholds = precision_recall_curve(test_label, test_proba)
+avg_precision = average_precision_score(test_label, test_proba)
+
+plt.figure()
+plt.plot(recall, precision, label=f'KAN (AP={avg_precision:.2f})')
+plt.xlabel('Recall')
+plt.ylabel('Precision')
+plt.title('Precision-Recall Curve')
+plt.legend()
+plt.grid()
 plt.show()
