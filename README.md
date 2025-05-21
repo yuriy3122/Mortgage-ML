@@ -1,5 +1,3 @@
-<img width="600" alt="kan_plot" src="https://github.com/yuriy3122/Mortgage-ML/blob/main/kan.png">
-
 # Mortgage-ML
 
 This code is an example of usage of Kolmogorov-Arnold Networks (KANs) for binary classification task.<br>
